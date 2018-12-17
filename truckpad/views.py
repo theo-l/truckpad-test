@@ -45,8 +45,6 @@ def terminal_entrance_registration(request):
         if not all([user_from_terminal, user_to_terminal, from_terminal, to_terminal]):
             return JsonResponse({'status': 10002, 'message': 'Terminal not found!'})
 
-        print(post_data)
-
         driver, _ = Driver.objects.get_or_create(cpf_no=post_data.pop('cpf_no'), from_terminal=user_from_terminal,
                                                  to_terminal=user_to_terminal)
         driver.update_registration_info(**post_data)
@@ -194,8 +192,8 @@ def update_driver(request):
 
         driver.update_registration_info(**post_data)
         result_data = {
-            'status':0,
-            'data':driver.to_dict()
+            'status': 0,
+            'data': driver.to_dict()
         }
 
         return JsonResponse(result_data)
