@@ -1,7 +1,7 @@
 # truckpad-test
 Tech Test for truckpad interview
 
-#API Docs
+# API Docs #
 
 ### 1. Truck arriving registration
 - Endpoint: **POST** /api/register-entrance/
