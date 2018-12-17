@@ -5,3 +5,8 @@
 @Author: liang
 @File: app.py
 """
+from django.apps import AppConfig
+
+
+class TruckPadConfig(AppConfig):
+    name = 'truckpad'
