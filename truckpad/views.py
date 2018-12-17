@@ -21,6 +21,7 @@ from truckpad.models import Driver, Terminal, Registration, Truck, get_truck_typ
 def terminal_entrance_registration(request):
     try:
         post_data = json.loads(request.body.decode())
+        # post_data=request.POST.dict()
     except JSONDecodeError:
         return JsonResponse({'status': 20000, 'message': 'Request data is not a valid json data object!'})
     else:
@@ -44,8 +45,6 @@ def terminal_entrance_registration(request):
         if not all([user_from_terminal, user_to_terminal, from_terminal, to_terminal]):
             return JsonResponse({'status': 10002, 'message': 'Terminal not found!'})
 
-        # post_data['from_terminal'] = user_from_terminal
-        # post_data['to_terminal'] = user_to_terminal
         print(post_data)
 
         driver, _ = Driver.objects.get_or_create(cpf_no=post_data.pop('cpf_no'), from_terminal=user_from_terminal,

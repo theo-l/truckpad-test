@@ -8,9 +8,9 @@ Tech Test for truckpad interview
 - Request Data Specification:
 ```json
 {
-  "truck_number": "DSZ3381", // truck's card numebr
+  "truck_number": "DHF3388", // truck's card numebr
   "truck_type": 1, // Truck's type number
-  "cpf_no": "23725897840", // driver's cpf number for unique idenfication
+  "cpf_no": "23725897841", // driver's cpf number for unique idenfication
   "name": "Liang", // driver's name
   "age": 30, // driver's age
   "gender": 1, // driver's gender: 0-secret, 1-male, 2-female
@@ -62,7 +62,7 @@ Tech Test for truckpad interview
 - Request Data specification:
 ```json
 {
-  "cpf_no": "23725898830"
+  "cpf_no": "23725898830" // **required**
 }
 ```
 - Response data specification:
